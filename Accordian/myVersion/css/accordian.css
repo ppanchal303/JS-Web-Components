@@ -1,0 +1,105 @@
+:root {
+  --yellow: #fdfd96;
+  --red: #ff6961;
+  --green: #77dd77;
+}
+
+* {
+  font-family: Arial;
+  margin: 0;
+}
+
+.content {
+  display: none;
+}
+
+.accordian.is-open .content {
+  display: block;
+  width: 25rem;
+  background-color: inherit;
+  /* margin: 25px; */
+}
+
+p {
+  margin: 0 25px;
+  padding: 5px 0;
+}
+
+.indicator-plus {
+  display: block;
+}
+
+.indicator-minus {
+  display: none;
+}
+
+.accordian.is-open .indicator-plus {
+  display: none;
+}
+
+.accordian.is-open .indicator-minus {
+  display: block;
+}
+
+.all-accordian {
+  position: fixed;
+  top: 10vh;
+  left: 20vw;
+  /* padding: 1rem; */
+  /* border-radius: 4rem; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.btn {
+  height: 3rem;
+  width: 25rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.btn1 {
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.btn2 {
+  background-color: var(--green);
+  border: none;
+}
+
+.btn3 {
+  background-color: var(--red);
+  border: none;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.btn3 .content {
+  border-radius: 0 0 1rem 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  text-align: left;
+  position: absolute;
+  left: 40px;
+  margin-top: 0.75rem;
+  /* background-color: blue; */
+  /* position: absolute;
+  left: 0px; */
+}
+
+.indicator-plus {
+  font-size: 2rem;
+  position: absolute;
+  right: 30px;
+  margin-top: 0.45rem;
+}
+
+.indicator-minus {
+  font-size: 2.5rem;
+  position: absolute;
+  right: 33px;
+  /* margin-top: 0.3rem; */
+}

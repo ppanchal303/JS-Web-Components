@@ -1,0 +1,59 @@
+:root {
+  --text-color: #ffffff;
+  --modal-color: #d68fd6;
+  --modal-color-dark: #934293;
+  --close-button-bg: #808080;
+}
+
+.modal-overlay {
+  /* border: 2px solid black; */
+  position: fixed;
+  height: 50%;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  background-color: var(--modal-color);
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal-is-open .modal-overlay {
+  opacity: 1;
+  z-index: 1;
+  border-radius: 0.2rem;
+  box-shadow: var(--modal-color-dark);
+}
+
+.modal-open {
+  display: grid;
+  place-items: center;
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  border-radius: 0.2rem;
+  color: white;
+  background-color: var(--close-button-bg);
+  border: none;
+}
+
+.modal-close {
+  padding: 0;
+  position: absolute;
+  right: -0.75rem;
+  top: -0.75rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--close-button-bg);
+  color: white;
+  border-radius: 50%;
+  border: none;
+}
+
+.modal-close:hover,
+.modal-close:focus,
+.modal-open:hover,
+.modal-open:focus {
+  background-color: var(--modal-color);
+  color: white;
+  border: 2px solid var(--modal-color-dark);
+}

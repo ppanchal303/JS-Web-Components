@@ -1,0 +1,71 @@
+:root {
+  --text-color: #ffffff;
+  --modal-color: #d68fd6;
+  --modal-color-dark: #934293;
+  --close-button-bg: #808080;
+}
+
+* {
+  font-family: Helvetica;
+  margin: 0;
+}
+
+.open-btn {
+  height: 2rem;
+  width: 5rem;
+  background-color: var(--modal-color);
+  border: none;
+  border-radius: 0.3rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.open-btn:hover {
+  background-color: var(--modal-color-dark);
+  color: var(--text-color);
+}
+
+.close-btn {
+  height: 1.5rem;
+  aspect-ratio: 1;
+  background-color: var(--close-button-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  top: -0.5rem;
+  right: -0.5rem;
+}
+
+.close-btn:hover {
+  background-color: var(--modal-color);
+  border: 2px solid var(--modal-color-dark);
+}
+
+.modal {
+  background-color: var(--modal-color);
+  height: 50%;
+  width: 50%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  border-radius: 0.3rem;
+}
+
+.modal-open .modal {
+  z-index: 1;
+  opacity: 100;
+}
+
+p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+}
